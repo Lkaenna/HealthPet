@@ -43,7 +43,7 @@ def login():
 
          user = User.query.filter_by(email=email).first()
 
-         if user and check_password_hash(User.senha_hash, senha):
+         if user and check_password_hash(user.senha_hash, senha):
              return "Login realizado com sucesso!"
          return 'Email ou senha inválidos'
     
