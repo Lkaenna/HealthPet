@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app= Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sql:///healthypet.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///healthypet.db'
 app.config['SECRET_KEY'] = 'secret'
 
 db = SQLAlchemy(app)
@@ -13,9 +13,8 @@ db = SQLAlchemy(app)
 from routes import *
 from models import *
 
-class User(db.Model):
-    with app.app.context():
-        db.create_all()
+with app.app_context():
+    db.create_all()
 
 if __name__ == "__main__":
     app.run(debug=True)

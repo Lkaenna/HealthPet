@@ -2,7 +2,7 @@
 
 from app import app, db
 from flask import render_template, request, redirect, url_for
-from werkzeug.security import generate_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 from models import User
 
 @app.route("/register", methods=["GET", "POST"])
@@ -32,3 +32,20 @@ def register():
 
         return "Conta criada com sucesso!"
     return render_template('register.html')
+
+@app.route("/login", methods=["GET", "POST"])
+
+def login():
+
+    if request.method == "POST":
+         email = request.form['email']
+         senha = request.form['senha']
+
+         user = User.query.filter_by(email=email).first()
+
+         if user and check_password_hash(User.senha_hash, senha):
+             return "Login realizado com sucesso!"
+         return 'Email ou senha inválidos'
+    
+    return render_template('login.html')
+
