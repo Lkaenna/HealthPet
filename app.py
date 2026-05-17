@@ -1,0 +1,1 @@
+#Iniciando o flask e conectando o banco de dados

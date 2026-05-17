@@ -1,0 +1,1 @@
+#Configurando aas paginas e as acoes
