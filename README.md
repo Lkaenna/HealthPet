@@ -36,3 +36,9 @@ O HealthyPet busca centralizar todas as informações importantes dos pets em um
 
 ---
 
+##📖 Futuras Implementações
+
+📱 Aplicativo mobile
+📅 Agenda veterinária
+💊 Controle de medicamentos
+
