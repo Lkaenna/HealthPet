@@ -1,6 +1,6 @@
 # 🐾 HealthyPet
 
-O **HealthyPet** é um sistema desenvolvido para facilitar o gerenciamento e a organização das informações dos pets em um único lugar.
+O **HealthyPet** é um sistema em desenvolvimento para facilitar o gerenciamento e a organização das informações dos pets em um único lugar.
 
 O objetivo do projeto é ajudar tutores a acompanharem a saúde, histórico e cuidados dos seus animais de forma simples, prática e acessível.
 
